@@ -1,0 +1,5 @@
+com.faac.assessment.test.persistence.dao
+com.faac.assessment.test.persistence.entity
+com.faac.assessment.test.service.rest
+com.faac.assessment.test.service.rest.json
+com.faac.assessment.test.service.soap
