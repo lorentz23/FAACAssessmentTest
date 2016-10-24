@@ -1,9 +1,0 @@
-/home/lorentz/Progetti/workspace/FAACAssessmentTest/src/main/java/com/faac/assessment/test/service/rest/HelloWorldRestService.java
-/home/lorentz/Progetti/workspace/FAACAssessmentTest/src/main/java/com/faac/assessment/test/persistence/dao/AbstractDao.java
-/home/lorentz/Progetti/workspace/FAACAssessmentTest/src/main/java/com/faac/assessment/test/service/soap/LoggedUserSoapService.java
-/home/lorentz/Progetti/workspace/FAACAssessmentTest/src/main/java/com/faac/assessment/test/service/rest/LoginUserRestService.java
-/home/lorentz/Progetti/workspace/FAACAssessmentTest/src/main/java/com/faac/assessment/test/persistence/dao/LoginUserDao.java
-/home/lorentz/Progetti/workspace/FAACAssessmentTest/src/main/java/com/faac/assessment/test/persistence/entity/LoginUser.java
-/home/lorentz/Progetti/workspace/FAACAssessmentTest/src/main/java/com/faac/assessment/test/persistence/entity/LoggedUser.java
-/home/lorentz/Progetti/workspace/FAACAssessmentTest/src/main/java/com/faac/assessment/test/persistence/dao/LoggedUserDao.java
-/home/lorentz/Progetti/workspace/FAACAssessmentTest/src/main/java/com/faac/assessment/test/service/rest/json/LoginUserJson.java
