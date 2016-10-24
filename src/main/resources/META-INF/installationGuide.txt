@@ -1,0 +1,5 @@
+L'applicazione è stata sviluppata con Server Apache-Tomcat 9.0 e con un database Postgresql 9.4.
+
+Il servizio REST di login è raggiungibile all'indirizzo http://localhost:8080/FAACAssessmentTest/rest/login
+Il servizio REST di registrazione dell'utente è raggiungibile all'indirizzo http://localhost:8080/FAACAssessmentTest/rest/register
+

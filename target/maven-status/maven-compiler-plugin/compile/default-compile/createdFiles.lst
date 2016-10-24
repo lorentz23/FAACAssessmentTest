@@ -1,0 +1,9 @@
+com/faac/assessment/test/persistence/dao/LoggedUserDao.class
+com/faac/assessment/test/service/rest/json/LoginUserJson.class
+com/faac/assessment/test/persistence/dao/LoginUserDao.class
+com/faac/assessment/test/service/rest/LoginUserRestService.class
+com/faac/assessment/test/persistence/entity/LoggedUser.class
+com/faac/assessment/test/service/soap/LoggedUserSoapService.class
+com/faac/assessment/test/service/rest/HelloWorldRestService.class
+com/faac/assessment/test/persistence/dao/AbstractDao.class
+com/faac/assessment/test/persistence/entity/LoginUser.class

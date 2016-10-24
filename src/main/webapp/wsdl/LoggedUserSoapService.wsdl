@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://soap.service.test.assessment.faac.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://soap.service.test.assessment.faac.com" xmlns:intf="http://soap.service.test.assessment.faac.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://soap.service.test.assessment.faac.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getLoggedUsers">
+    <complexType/>
+   </element>
+   <element name="getLoggedUsersResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getLoggedUsersReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getLoggedUsersResponse">
+
+      <wsdl:part element="impl:getLoggedUsersResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLoggedUsersRequest">
+
+      <wsdl:part element="impl:getLoggedUsers" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="LoggedUserSoapService">
+
+      <wsdl:operation name="getLoggedUsers">
+
+         <wsdl:input message="impl:getLoggedUsersRequest" name="getLoggedUsersRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getLoggedUsersResponse" name="getLoggedUsersResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="LoggedUserSoapServiceSoapBinding" type="impl:LoggedUserSoapService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getLoggedUsers">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLoggedUsersRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLoggedUsersResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="LoggedUserSoapServiceService">
+
+      <wsdl:port binding="impl:LoggedUserSoapServiceSoapBinding" name="LoggedUserSoapService">
+
+         <wsdlsoap:address location="http://localhost:8080/FAACAssessmentTest/services/LoggedUserSoapService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

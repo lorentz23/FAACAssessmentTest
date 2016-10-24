@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from LoggedUserSoapServiceService WSDL service -->
+
+  <service name="LoggedUserSoapService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://soap.service.test.assessment.faac.com"/>
+      <parameter name="wsdlServiceElement" value="LoggedUserSoapServiceService"/>
+      <parameter name="schemaQualified" value="http://soap.service.test.assessment.faac.com"/>
+      <parameter name="wsdlServicePort" value="LoggedUserSoapService"/>
+      <parameter name="className" value="com.faac.assessment.test.service.soap.LoggedUserSoapService"/>
+      <parameter name="wsdlPortType" value="LoggedUserSoapService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://soap.service.test.assessment.faac.com" xmlns:retNS="http://soap.service.test.assessment.faac.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getLoggedUsers" qname="operNS:getLoggedUsers" returnQName="retNS:getLoggedUsersReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="getLoggedUsers"/>
+
+  </service>
+</deployment>
