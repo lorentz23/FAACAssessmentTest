@@ -30,5 +30,13 @@ public class LoggedUserSoapService {
 		
 		return loggedUserCache.toArray(new String[]{});
 	}
+
+	public LoggedUserDao getLoggedUserDao() {
+		return loggedUserDao;
+	}
+
+	public void setLoggedUserDao(LoggedUserDao loggedUserDao) {
+		this.loggedUserDao = loggedUserDao;
+	}
 	
 }

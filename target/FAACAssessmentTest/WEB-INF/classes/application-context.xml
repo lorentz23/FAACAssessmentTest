@@ -37,7 +37,6 @@
 	</bean>
 	
 		<bean id="loggedUserSoapService" class="com.faac.assessment.test.service.soap.LoggedUserSoapService">
-		<property name="loginUserDao" ref="loginUserDao"/>
 		<property name="loggedUserDao" ref="loggedUserDao"/>
 	</bean>
 

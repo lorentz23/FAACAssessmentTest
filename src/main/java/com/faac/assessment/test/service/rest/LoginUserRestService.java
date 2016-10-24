@@ -144,4 +144,20 @@ public class LoginUserRestService {
 		
 		return json;
 	}
+
+	public LoginUserDao getLoginUserDao() {
+		return loginUserDao;
+	}
+
+	public void setLoginUserDao(LoginUserDao loginUserDao) {
+		this.loginUserDao = loginUserDao;
+	}
+
+	public LoggedUserDao getLoggedUserDao() {
+		return loggedUserDao;
+	}
+
+	public void setLoggedUserDao(LoggedUserDao loggedUserDao) {
+		this.loggedUserDao = loggedUserDao;
+	}
 }

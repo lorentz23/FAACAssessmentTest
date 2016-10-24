@@ -9,6 +9,7 @@ import javax.persistence.PersistenceContext;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 /*
@@ -60,16 +61,23 @@ public abstract class AbstractDao<T extends Object> {
     	}
     }
     
-    @Transactional
+    @Transactional(propagation = Propagation.REQUIRED)
     public void removeUser(T entity) {
     	try {
-    		em.getTransaction().begin();
-    		em.remove(entity);
-    		em.getTransaction().commit();
+    		EntityManager em = getEm();
+    		em.remove(em.contains(entity) ? entity : em.merge(entity));
     	} catch(Exception e) {
     		logger.error("Unable to remove entity " + e.getMessage());
     	}
     }
     
-    public abstract String getFindAllNamedQuery();
+    public EntityManager getEm() {
+		return em;
+	}
+
+	public void setEm(EntityManager em) {
+		this.em = em;
+	}
+
+	public abstract String getFindAllNamedQuery();
 }

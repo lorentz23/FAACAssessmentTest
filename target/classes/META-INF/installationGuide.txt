@@ -2,4 +2,22 @@ L'applicazione è stata sviluppata con Server Apache-Tomcat 9.0 e con un databas
 
 Il servizio REST di login è raggiungibile all'indirizzo http://localhost:8080/FAACAssessmentTest/rest/login
 Il servizio REST di registrazione dell'utente è raggiungibile all'indirizzo http://localhost:8080/FAACAssessmentTest/rest/register
+Il servizio REST di logout della sessione dell'utente è raggiungibile all'indirizzo http://localhost:8080/FAACAssessmentTest/rest/logout
 
+Il servizio SOAP di visualizzazione degli utenti collegati è raggiungibile all'indirizzo http://localhost:8080/FAACAssessmentTest/services/LoggedUserSoapService
+
+Per installare l'applicazione è necessario avere Eclipse, Maven 3.3.9, Apache Tomcat 9.0 e PostgreSQL 9.4
+
+L'applicazione è costituita da un DB composto da due tabelle:
+
+- login_user
+create table login_user(id serial primary key, fullname character varying(255), username character varying(255) not null, password character varying(255) not null, email character varying(255));
+
+- logged_user
+create table logged_user(id serial primary key, session_id character varying(255) not null, login_user_id integer);
+alter table logged_user add constraint fk_login_user_id foreign key (login_user_id) references login_user(id);
+
+usernameDB: faac
+passwordDB: faac
+
+Per compilare l'applicazione lanciare il comando mvn clean install, infine inserire all'interno della cartella <INSTALLATION_DIR>/apache-tomcat-9.0.0.M11/lib/ i driver per postgresql "postgresql-9.4.1211.jre7.jar"
